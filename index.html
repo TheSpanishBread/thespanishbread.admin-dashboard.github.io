@@ -3,186 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Project: Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="search">
-            <a href="#"><img src="magnify.svg" alt="magnify"></a>
-            <input type="text" id="search" name="search" pattern="{a-zA-z0-9}+">
-        </div>
         <div class="profile">
-            <a href="#"><img src="bell-ring.svg" alt="bell"></a>
-            <img src="prfile.jpg" > 
-            <p>Zack Valentine</p>
+            <div class="profileSearch flexRow">
+                <label for="search">
+                    <img src="./svg/magnify.svg" alt="searchIcon" srcset="">
+                </label>
+                <input type="text" name="search" id="search">
+            </div>
+            <div class="profileSettings flexRow">
+                <img src="./svg/bell-ring.svg">
+                <img src="./img/prfile.jpg">
+                <p>Zack Valentine</p>
+            </div>
+            
+            <div class="profileWelcome">
+                <img src="./img/prfile.jpg">
+                <p class="profileWelcomeHi">Hi there,</p>
+                <p class="profileWelcomeName">Zack Valentine</p>
+                <p class="profileWelcomeUsername">(@zackValentine)</p>
+            </div>
+            <div class="profileActions flexRow">
+                <button class="profileActionsNew">New</button>
+                <button class="profileActionsUpload">Upload</button>
+                <button class="profileActionsShare">Share</button>
+            </div>
         </div>
-        <div class="welcome">
-            <img src="prfile.jpg"> 
-            <p class="hi">Hi there,</p>
-            <p class="name">Zack Valentine(@zack)</p>
-        </div>
-        <div class="adminOptions">
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
-        </div>
+
     </header>
-    <div class="sidebar">
-        <div class="section">
-            <img src="tiles-nine-svgrepo-com.svg" alt="Dashboard">
-                <p>Dashboard</p>
-        </div>
-        <div class="menu">
-            <a href="#">
-                <img src="home-account.svg" alt="home">
-                <p>Home</p>
-            </a>
-            <a href="#">
-                <img src="card-account-details.svg" alt="profile">
-                <p>Profile</p>
-            </a>
-            <a href="#">
-                <img src="message-badge-outline.svg" alt="messages">
-                <p>Messages</p>
-            </a>
-            <a href="#">
-                <img src="clock-outline.svg" alt="history">
-                <p>History</p>
-            </a>
-            <a href="#">
-                <img src="folder.svg" alt="tasks">
-                <p>Tasks</p>
-            </a>
-            <a href="#">
-                <img src="account-group.svg" alt="communities">
-                <p>Communities</p>
-            </a>
-        </div>
-        <div class="menuExtra">
-            <a href="#">
-                <img src="cog-outline.svg" alt="settings">
-                <p>Setting</p>
-            </a>
-            <a href="#">
-                <img src="question-mark-svgrepo-com.svg" alt="support">
-                <p>Support</p>
-            </a>
-            <a href="#">
-                <img src="security.svg" alt="privacy">
-                <p>Privacy</p>
-            </a>
-        </div>
+    <div class="sidebar flexColumn">
+            <div class="sidebarLogo flexRow">
+                <img src="./svg/tiles-nine-svgrepo-com.svg">
+                <p class="sidebarText">Dashboard</p>
+            </div>
+            <div class="sidebarNav flexColumn">
+                <a href="#" class="flexRow">
+                    <img src="./svg/home-account.svg">
+                    <p>Home</p>
+                </a>
+                <a href="#" class="flexRow">
+                    <img src="./svg/card-account-details.svg">
+                    <p>Profile</p>
+                </a>
+                <a href="#" class="flexRow">
+                    <img src="./svg/message-badge-outline.svg">
+                    <p>Messages</p>
+                </a>
+                <a href="#" class="flexRow">
+                    <img src="./svg/clock-outline.svg">
+                    <p>History</p>
+                </a>
+                <a href="#" class="flexRow">
+                    <img src="./svg/folder.svg">
+                    <p>Tasks</p>
+                </a>
+                <a href="#" class="flexRow">
+                    <img src="./svg/account-group.svg">
+                    <p>Communities</p>
+                </a>                                                                                
+            </div>
+            <div class="sidebarSetting flexColumn">
+                <a href="#" class="flexRow">
+                    <img src="./svg/cog-outline.svg">
+                    <p>Settings</p>
+                </a>
+                <a href="#" class="flexRow">
+                    <img src="./svg/question-mark-svgrepo-com.svg">
+                    <p>Support</p>
+                </a>    
+                <a href="#" class="flexRow">
+                    <img src="./svg/security.svg">
+                    <p>Privacy</p>
+                </a>                                                        
+            </div>
     </div>
     <main>
-        <div class="projects">
-            <h1>Your Projects</h1>
-            <div class="projectBox">
-                <div class="projectSection">
-                    <h1>Supercool Project</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sapiente officia amet dolorum possimus explicabo, debitis reiciendis tempora corrupti dolor, excepturi non tempore numquam. Et provident voluptate expedita aperiam harum.</p>
-                    <div class="projectOptions">
-                        <img src="like-right-svgrepo-com.svg">
-                        <img src="eye-svgrepo-com.svg">
-                        <img src="share-nodes-svgrepo-com.svg">
-                    </div>
+        <div class="dashboard">
+
+            <div class="dashboardProjects flexColumn">
+                <div class="dashboardProjectsTitle">
+                    <p>Your Projects</p>
                 </div>
-                <div class="projectSection">
-                    <h1>Less cool Project</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sapiente officia amet dolorum possimus explicabo, debitis reiciendis tempora corrupti dolor, excepturi non tempore numquam. Et provident voluptate expedita aperiam harum.</p>
-                                    <div class="projectOptions">
-                        <img src="like-right-svgrepo-com.svg">
-                        <img src="eye-svgrepo-com.svg">
-                        <img src="share-nodes-svgrepo-com.svg">
-                    </div>
-                </div>
-                <div class="projectSection">
-                    <h1>Impossible App</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sapiente officia amet dolorum possimus explicabo, debitis reiciendis tempora corrupti dolor, excepturi non tempore numquam. Et provident voluptate expedita aperiam harum.</p>
-                                   <div class="projectOptions">
-                        <img src="like-right-svgrepo-com.svg">
-                        <img src="eye-svgrepo-com.svg">
-                        <img src="share-nodes-svgrepo-com.svg">
-                    </div>
-                </div>
-                <div class="projectSection">
-                    <h1>Easy Peasy App</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sapiente officia amet dolorum possimus explicabo, debitis reiciendis tempora corrupti dolor, excepturi non tempore numquam. Et provident voluptate expedita aperiam harum.</p>
-                                                 <div class="projectOptions">
-                        <img src="like-right-svgrepo-com.svg">
-                        <img src="eye-svgrepo-com.svg">
-                        <img src="share-nodes-svgrepo-com.svg">
-                    </div>
-                </div>
-   
-                <div class="projectSection">
-                    <h1>Ad Blocker</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sapiente officia amet dolorum possimus explicabo, debitis reiciendis tempora corrupti dolor, excepturi non tempore numquam. Et provident voluptate expedita aperiam harum.</p>
-                                    <div class="projectOptions">
-                        <img src="like-right-svgrepo-com.svg">
-                        <img src="eye-svgrepo-com.svg">
-                        <img src="share-nodes-svgrepo-com.svg">
-                    </div>
-                </div>
-                <div class="projectSection">
-                    <h1>Money Maker</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sapiente officia amet dolorum possimus explicabo, debitis reiciendis tempora corrupti dolor, excepturi non tempore numquam. Et provident voluptate expedita aperiam harum.</p>
-                                    <div class="projectOptions">
-                        <img src="like-right-svgrepo-com.svg">
-                        <img src="eye-svgrepo-com.svg">
-                        <img src="share-nodes-svgrepo-com.svg">
-                    </div>
+                <div class="dashboardProjectsItems" id="dashboardProjectsItems">
+
                 </div>
             </div>
-        </div>
-        <div class="announcements">
-            <h1>Announcements</h1>
-            <div class="announcementBox">
-                <div class="accouncementSection">
-                    <h1>Site maintenance</h1>
-                        <p>This is just a bunch of text I dont want to bother filling up...</p>
+
+            <div class="dashboardAnnouncements flexColumn">
+                <div class="dashboardAnnouncementsTitle">
+                    <p>Announcements</p>
                 </div>
-                                <div class="accouncementSection">
-                    <h1>Community Share Day</h1>
-                        <p>This is just a bunch of text I dont want to bother filling up...</p>
-                </div>
-                                <div class="accouncementSection">
-                    <h1>Updated Privacy Policy</h1>
-                        <p>This is just a bunch of text I dont want to bother filling up...</p>
+                <div class="dashboardAnnouncementsItems flexColumn" id="dashboardAnnouncementsItems">
+                    <div class="dashboardAnnouncementsItem1">
+                        <div class="dashboardAnnouncementsItem1Title">
+                            <p>Site Maintenance</p>
+                        </div>
+                        <div class="dashboardAnnouncementsItem1Content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... Dolorum molestiae odio laudantium nulla tenetur, numquam dolores autem rerum voluptatum eos culpa veniam perspiciatis eaque blanditiis tempore similique fugit, consequatur et?</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dashboardAnnouncementsItem2">
+                        <div class="dashboardAnnouncementsItem2Title">
+                            <p>Community Share Day</p>
+                        </div>
+                        <div class="dashboardAnnouncementsItem2Content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestiae odio laudantium nulla tenetur, numquam dolores autem rerum voluptatum eos culpa veniam perspiciatis eaque blanditiis tempore similique fugit, consequatur et?</p>
+                        </div>
+                       
+                    </div>
+                     <hr>
+                    <div class="dashboardAnnouncementsItem3">
+                        <div class="dashboardAnnouncementsItem3Title">
+                            <p>Updated Privacy Policy</p>
+                        </div>
+                        <div class="dashboardAnnouncementsItem3Content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestiae odio laudantium nulla tenetur, numquam dolores autem rerum voluptatum eos culpa veniam perspiciatis eaque blanditiis tempore similique fugit, consequatur et?</p>
+                        </div>
+                       
+                    </div>
+                     <hr>                                        
                 </div>
             </div>
-        </div>
-        <div class="trending">
-            <h1>Trending</h1>
-            <div class="trendingBox">
-                <div class="trendingSection">
-                    <img src="simple-minimalist-cute-dog-cartoon-illustration-drawing-premium-vector.jpg">
-                    <p class="tagID">@tegan</p>
-                    <p class="tagLine">World Peace Builder</p>
-                </div>
-                <div class="trendingSection">
-                    <img src="simple-minimalist-cute-dog-cartoon-illustration-drawing-premium-vector.jpg">
-                    <p class="tagID">@morgan</p>
-                    <p class="tagLine">Super Cool Project</p>
-                </div>
-                <div class="trendingSection">
-                    <img src="simple-minimalist-cute-dog-cartoon-illustration-drawing-premium-vector.jpg">
-                    <p class="tagID">@kendall</p>
-                    <p class="tagLine">Life Changing App</p>
-                </div>
-                <div class="trendingSection">
-                    <img src="simple-minimalist-cute-dog-cartoon-illustration-drawing-premium-vector.jpg">
-                    <p class="tagID">@alex</p>
-                    <p class="tagLine">No Traffic Maker</p>
-                </div>
 
-
+            <div class="dashboardTrending flexColumn">
+                <div class="dashboardTrendingTitle">
+                    <p>Trending</p>
+                </div>
+                
+                <div class="dashboardTrendingItems" id="dashboardTrendingItems">
+                    <div class="dashboardTrendingItem1">
+                        <div class="dashboardTrendingItem1Img">
+                            <img src="./img/Screenshot 2025-06-28 131615.png" alt="dog1" srcset="">
+                        </div>
+                        <div class="dashboardTrendingItem1User">
+                            <p>@tegan</p>
+                        </div>
+                        <div class="dashboardTrendingItem1Tag">
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="dashboardTrendingItem2">
+                        <div class="dashboardTrendingItem2Img">
+                            <img src="./img/Screenshot 2025-06-28 131710.png" alt="dog2" srcset="">
+                        </div>
+                        <div class="dashboardTrendingItem2User">
+                            <p>@morgan</p>
+                        </div>
+                        <div class="dashboardTrendingItem2Tag">
+                            <p>Super Cool Project</p>
+                        </div>
+                    </div>
+                    <div class="dashboardTrendingItem3">
+                        <div class="dashboardTrendingItem3Img">
+                            <img src="./img/Screenshot 2025-06-28 131719.png" alt="">
+                        </div>
+                        <div class="dashboardTrendingItem3User">
+                            <p>@kendall</p>
+                        </div>
+                        <div class="dashboardTrendingItem3Tag">
+                            <p>Life Changing App</p>
+                        </div>      
+                    </div>
+                    <div class="dashboardTrendingItem4">
+                        <div class="dashboardTrendingItem4Img">
+                            <img src="./img/Screenshot 2025-06-28 131747.png" alt="">
+                        </div>
+                        <div class="dashboardTrendingItem4User">
+                            <p>@alex</p>
+                        </div>
+                        <div class="dashboardTrendingItem4Tag">
+                            <p>No Traffic Maker</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <p>Webpage by <a href="#">The SpanishBread</a></p>
-    </footer>
 </body>
-</html> 
+</html>
